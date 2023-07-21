@@ -23,3 +23,20 @@ def two_sum(arr)
 end
 
 
+def my_transpose(arr)
+  return [] if arr.empty?
+  raise ArgumentError unless arr.is_a?(Array)
+
+  new_arr =[]
+
+  (0...arr.length).each do |i|
+    sub_arr = []
+    (0...arr.length).each do |j|
+      sub_arr << arr[j][i]
+    end
+    new_arr << sub_arr
+  end
+  new_arr
+end
+
+
