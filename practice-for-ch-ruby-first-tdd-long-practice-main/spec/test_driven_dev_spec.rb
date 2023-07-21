@@ -29,7 +29,18 @@ describe "#two_sum" do
     it  "should return pairs of indices whose elements sum to 0" do
         expect(two_sum([-1, 0, 2, -2, 1])).to eq([[0, 4], [2, 3]])
     end
+end
 
+describe "#my_transpose" do
+    it "should return nil if input array is empty" do
+        expect(my_transpose([])). to eq([])
+    end
 
+    it "should raise error if input not an array" do
+        expect {my_transpose("a")}.to raise_error(ArgumentError)
+    end
 
+    it "should transpose the input arr's rows and columns" do
+        expect(my_transpose([[0, 1, 2],[3, 4, 5],[6, 7, 8]])).to eq([[0, 3, 6],[1, 4, 7],[2, 5, 8]])
+    end
 end
